@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteerMyEvent</title>
+
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: black;
+        font-family: 'Merriweather', sans-serif;
+        background-size: 100%;
+        text-align: center;
+        font-size: 20px;
+        width: 100%;
+        padding: 15px;
+        border-bottom: 4px groove #C19A6B;
+    }
+    h2 {
+        font-family: 'Lobster', sans-serif;
+        text-align: center;
+        color: #FFE66D;
+        font-size: 64px;
+    }
+    nav {
+        font-family: 'Merriweather', sans-serif;
+        color: #F7FFF7;
+        top: 0;
+        font-size: 20px;
+        padding-right: 5%
+    }
+
+    ul{
+      list-style-type: none;
+      padding-left: 5%;
+    }
+    ul li {
+        display: inline-block;
+        padding-right: 2%;
+        margin-top: 5px;
+    }
+    li a:hover {
+        background-color: silver;
+    }
+
+    body
+    {
+        background-color: black;
+    }
+    .content {
+
+    text-align: center;
+    padding-top: 1%;
+
+    }
+
+    label{
+    color:  #C19A6B;
+    font-size: 25px;
+    }
+
+    input{
+    border: 4px groove #C19A6B;
+    border-radius: 4px;
+    font-size: 15px;
+    }
+
+    .submitButton{
+      background: #C19A6B;
+        border-radius: 999px;
+        box-shadow: #C19A6B 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 34px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        width: fit-content;
+        border: 0;
+    }
+    .Body_One {
+    background-color: black;
+    color: white;
+    border-right:3px black groove;
+    margin-top: 5%;
+    border-left: 3px black groove;
+    border-top:3px black groove;
+    border-bottom:3px black groove;
+      text-align: center;
+      margin-left:10%;
+      margin-right:10%;
+      padding: 2%;
+      display: block;
+}
+
+p {
+  font-family: 'Merriweather', sans-serif;
+  color: #F7FFF7;
+}
+b {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: bold;
+  color: #F7FFF7;
+}
+
+.button1{
+  background: #C19A6B;
+    border-radius: 999px;
+    box-shadow: #C19A6B 0 10px 20px -10px;
+    font-family: 'Merriweather', sans-serif;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 34px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    width: fit-content;
+    border: 0;
+}
+
+footer {
+  font-family: 'Merriweather', sans-serif;
+  text-align: center;
+  color: #F7FFF7;
+  font-size: 16px;
+  padding-top: 10%
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+</style>
+
+<body>
+    <header>
+        <div class="Top">
+            <h2 style="font-size: 45px;color:white; text-align: center; ">
+                <a href="/">Twitter Form</a>
+            </h2>
+        </div>
+    </header>   
+
+<div class="Body_One">
+    <p> <b> Twitter Data form </b> </p>
+    <p> <b> get latest Tweets by Username within the last 7 days </b> </p>
+    <br>
+</div>
+    <div class="content">
+        <form name = 'tweetIt' method ="POST"  action="/Twitter" >
+            <label for="Name">Username:</label><br>
+            <input type="text" id="Name" name="Name" value="" ><br>
+        <br>
+        <input type = "submit" class="button1"/>
+        <br>
+        </form>
+    </div>
+
+    <footer>
+      Twiiter API Use
+    </footer>
+
+  <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</body>
+</html>
+
