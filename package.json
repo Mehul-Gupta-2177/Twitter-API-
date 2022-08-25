@@ -1,0 +1,20 @@
+{
+  "name": "twitter_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Mehul Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/language": "^5.0.0",
+    "child_process": "^1.0.2",
+    "formidable": "^2.0.1",
+    "mongodb": "^4.7.0",
+    "needle": "^3.1.0",
+    "twitter-api-v2": "^1.12.2"
+  }
+}

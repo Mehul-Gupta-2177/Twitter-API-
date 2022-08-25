@@ -3,27 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TwitterTool</title>
-
-    <script>
-        function countryChange(selectObj) { 
-            var idx = selectObj.selectedIndex; 
-            var which = selectObj.options[idx].value; 
-            
-            if(which == "COVID")
-            {
-                document.getElementById("context").value = "123.1220701888179359745";
-            }
-            else if(which == "Inflation")
-            {
-                document.getElementById("context").value = "67.1486458201117642754";
-            }
-            else if(which == "Basketball")
-            {
-                document.getElementById("context").value = "11.706083902411055104";
-            }
-        }
-    </script>
+    <title>Twitter Diagnostic</title>
 
 </head>
 
@@ -160,7 +140,7 @@ footer {
 }
 
 a {
-    color: goldenrod;
+    color: white;
     text-decoration: none;
 }
 
@@ -175,69 +155,25 @@ a:hover {
     <header>
         <div class="Top">
             <h2 style="font-size: 45px;color:white; text-align: center; ">
-                <a href="/">Twitter Form</a>
+                <a href="/">Diagnostic Form</a>
             </h2>
         </div>
     </header>   
 
 <div class="Body_One">
-    <p> <b> Twitter Data form </b> </p>
-    <p> <b> get latest Tweets by Username within the last 7 days </b> </p>
+    <p> <b> Twitter Diagnostic form </b> </p>
+    <p> <b> get diagnostics from the latest tweets to get the buzzwords </b> </p>
     <br>
-    <p>
-        Usage of the tool. Please Go to this page: <a href="https://tweet-entity-extractor.glitch.me/" target="_blank"> Twitter Context </a>
-        to search for a sample tweet, and then choose the entity_name field and the context of the desired Category and 
-        Add it to the form before submitting. If you choose wrongly no tweets may be extracted. In the form after this
-        entity_name field is the category you may wanna search for.
-    </p>
-    <br>
-    <p>
-        Some of the entities with the context ID's have already been preloaded in the normal search as examples
-        of sample use cases, and this can be configured based on your organisation's need if you plan to get 
-        a custom model of the tool. Examples for customisation options are:
-        getting different amount of Tweets per search,
-        More filtered search options
-        Different ML model to see the sentiment of the tweet.
-        and many other options are available if you plan to get a custom tool. contact me on <a href = "mailto: mehul.gupta@tufts.edu">my email</a> if you want 
-        to get a custom copy.
-    </p>
 </div>
     <div class="content">
-        <p>
-            Normal Search
-        </p>
-        <form name = 'tweetIt' method ="POST"  action="/Twitter" >
-            <label for="Name">Entity Name:</label><br>
-            <select id="Name" name="Name" onchange="countryChange(this);" required>
-                <option value="0">Select a Category</option>
-                <option value="COVID">COVID</option>
-                <option value="Inflation">Inflation</option>
-                <option value="Basketball">Basketball</option>
-            </select>
-            
-            <br>
+        <form name = 'tweetIt' method ="POST"  action="/TwitterDiag" >
+            <label for="Word">Word you want to search: Specific Word</label><br>
+            <input type="text" id="Word" name="Word" value="" required ><br>
         <br>
-        <label for="context">Context:</label><br>
-            <input type="text" id="context" name="context" value="" required><br>
-            <br>
-        <input type = "submit" class="button1" id="button1"/>
+        <label for="Tag">Tag you want to search: Overall Category</label><br>
+        <input type="text" id="Tag" name="Tag" value="" required><br>
         <br>
-        </form>
-        <br>
-        <br>
-        <p>
-            Advanced Search
-        </p>
-        <br>
-        <br>
-        <form name = 'tweetIt' method ="POST"  action="/Twitter" >
-            <label for="Name">Entity Name:</label><br>
-            <input type="text" id="Name" name="Name" value="" required><br>
-        <br>
-        <label for="context">Context:</label><br>
-            <input type="text" id="context" name="context" value="" required><br>
-            <br>
-        <input type = "submit" class="button1" id="button1"/>
+        <input type = "submit" class="button1"/>
         <br>
         </form>
     </div>
